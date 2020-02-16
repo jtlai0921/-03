@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <RichTextBlock FontSize="20" TextWrapping="Wrap">
+            <Paragraph>
+                寫入的內容及順序如下：
+            </Paragraph>
+            <Paragraph>
+                <Span>1、bool值：true；</Span>
+                <LineBreak/>
+                <Span>2、DateTime型態值：2010-8-21；</Span>
+                <LineBreak/>
+                <Span>3、字串：測試文字</Span>
+            </Paragraph>
+        </RichTextBlock>
+        <Button Content="寫入檔案" Click="OnWrite"/>
+        <Line Stretch="Fill" StrokeThickness="5" Stroke="LightYellow" X1="0" X2="20" Margin="0,25"/>
+        
+        <Button Content="讀取內容" Click="OnRead"/>
+        <TextBlock Name="tbResult" FontSize="20" TextWrapping="Wrap"/>
+    </StackPanel>
+</Page>

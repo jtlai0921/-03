@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="NotificationClientApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotificationClientApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" FontSize="20">
+            以下開關預設處於關閉狀態,當開關開啟時,會向推送伺服器申請通道URI,並顯示在Visual Studio的“輸出”視窗中。
+            <LineBreak/>
+            若果不希望接收推送知會，使以下控制項處於關閉狀態即可。
+        </TextBlock>
+        <ToggleSwitch OnContent="開" OffContent="關" IsOn="False"  Toggled="OnToggled"/>
+    </StackPanel>
+</Page>

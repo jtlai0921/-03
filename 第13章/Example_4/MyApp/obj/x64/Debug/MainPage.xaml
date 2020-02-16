@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBox x:ConnectionId='1' Header="請輸入圖形URI：" Name="txtUri" Text="http://img.taopic.com/uploads/allimg/110815/1830-110Q509291115.jpg"/>
+        <Button x:ConnectionId='2' Content="取得圖形"                   />
+        <Image x:ConnectionId='3' Name="img" Height="300" Stretch="Uniform" Margin="0,20,0,0" />
+    </StackPanel>
+</Page>
+

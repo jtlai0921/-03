@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="6da9f489-4f08-4417-b0b5-3633929414e8"
+    Publisher="CN=admin"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="6da9f489-4f08-4417-b0b5-3633929414e8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>TestServiceApp</DisplayName>
+    <PublisherDisplayName>admin</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="TestServiceApp.App">
+      <uap:VisualElements
+        DisplayName="TestServiceApp"
+        Square150x150Logo="Assets\Logo.png"
+        Square44x44Logo="Assets\SmallLogo.png"
+        Description="TestServiceApp"
+        BackgroundColor="#464646">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+
+      <Extensions>
+        <uap:Extension Category="windows.appService" EntryPoint="BgServiceTasks.ServiceTask">
+          <uap:AppService Name="Add"/>
+        </uap:Extension>
+        <uap:Extension Category="windows.appService" EntryPoint="BgServiceTasks.ServiceTask">
+          <uap:AppService Name="Sub"/>
+        </uap:Extension>
+        <uap:Extension Category="windows.appService" EntryPoint="BgServiceTasks.ServiceTask">
+          <uap:AppService Name="Mul"/>
+        </uap:Extension>
+        <uap:Extension Category="windows.appService" EntryPoint="BgServiceTasks.ServiceTask">
+          <uap:AppService Name="Div"/>
+        </uap:Extension>
+      </Extensions>
+
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

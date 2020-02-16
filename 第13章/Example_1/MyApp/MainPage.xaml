@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot>
+            <PivotItem Header="伺服器">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="在用戶端輸入以下IP位址：" FontSize="20"/>
+                        <TextBlock Name="tbIp" FontSize="36" IsTextSelectionEnabled="True"/>
+                    </StackPanel>
+                    <ListView Grid.Row="1" Margin="0,15,0,3" Name="lvMsg">
+                        <ListView.Header>
+                            <TextBlock Foreground="LightGreen" Text="收到的訊息清單" FontSize="20"/>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="3,12">
+                                    <TextBlock FontSize="20" Foreground="Yellow">
+                                        來自
+                                        <Run Text="{Binding Path=FromIP}"/>
+                                        的訊息：
+                                    </TextBlock>
+                                    <TextBlock TextWrapping="Wrap" FontSize="24" Text="{Binding Path=Message}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="用戶端">
+                <StackPanel>
+                    <TextBox Name="txtServer" Header="伺服器IP："/>
+                    <TextBox Name="txtMessage" Header="訊息內容：" TextWrapping="Wrap" Height="160"/>
+                    <Button HorizontalAlignment="Center" Content="傳送" Padding="50,0" Click="OnSend"/>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <ComboBox Name="cmbRemovables" Header="請選取一個抽取式儲存：" DisplayMemberPath="DisplayName"/>
+        
+        <Rectangle Height="3" Fill="White"/>
+        <TextBox Margin="0,10,0,0" Name="txtInput" Height="100" TextWrapping="Wrap" Header="請輸入內容："/>
+        <Button Content="儲存到抽取式儲存中" Click="OnSave" />
+    </StackPanel>
+</Page>

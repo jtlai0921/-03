@@ -1,0 +1,2 @@
+C:\Users\joshhu\Desktop\win10\第12章\Example_14\MyApp\BgServiceTasks\BgServiceTasks.csproj;x64
+C:\Users\joshhu\Desktop\win10\第12章\Example_14\MyApp\TestServiceApp\TestServiceApp.csproj;x64

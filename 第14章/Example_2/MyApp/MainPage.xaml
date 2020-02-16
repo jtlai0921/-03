@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Grid Width="250" Height="250" HorizontalAlignment="Center">
+            <Ellipse StrokeThickness="8" StrokeDashArray="3" Stroke="Yellow"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" TextLineBounds="Tight" Name="tbNum"/>
+        </Grid>
+        <TextBlock HorizontalAlignment="Center" Text="以上是您搖到的幸運數字" FontSize="24" Margin="0,20,0,0"/>
+    </StackPanel>
+</Page>

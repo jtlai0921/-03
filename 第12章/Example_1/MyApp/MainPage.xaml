@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock Text="寫入檔案" FontSize="36"/>
+        
+        <Button Content="將位元組序列寫入檔案"  Click="OnWriteToFile" Margin="0,15,0,0"/>
+        <TextBlock Name="tbBytes" TextWrapping="Wrap" FontSize="24"/>
+
+       <Line X1="0" Y1="0" X2="100" Y2="0" StrokeThickness="6" Stretch="Fill" Stroke="LightGray" Margin="0,20"/>
+        <TextBlock Text="從檔案讀入" FontSize="36"/>
+        <Button Content="讀取位元組序列" Click="OnReadFromFile"/>
+        <TextBlock Name="tbReadBytes" FontSize="24" TextWrapping="Wrap"/>
+    </StackPanel>
+</Page>

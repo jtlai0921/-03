@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <HyperlinkButton x:ConnectionId='1' Content="藍芽設定" Tag="b"                    />
+        <HyperlinkButton x:ConnectionId='2' Content="WLan設定" Tag="w"                    />
+        <HyperlinkButton x:ConnectionId='3' Content="節電模式設定" Tag="p"                    />
+        <HyperlinkButton x:ConnectionId='4' Content="飛行模式設定" Tag="a"                    />
+        <HyperlinkButton x:ConnectionId='5' Content="鎖屏設定" Tag="l"                    />
+        <HyperlinkButton x:ConnectionId='6' Content="我的音樂庫" Tag="m"                    />
+    </StackPanel>
+</Page>
+

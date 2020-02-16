@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="輸入URI：" VerticalAlignment="Center"/>
+                <TextBox Name="txtUri" Grid.Column="1" />
+                <Button Content="取得" Margin="12,0,0,0" Grid.Column="2" Click="OnGetdata"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,18,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ListView Name="lvItems" IsItemClickEnabled="True" ItemClick="OnItemClick">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="Purple" Text="{Binding Title.Text}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <WebView Name="wv" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

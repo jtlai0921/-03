@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="建立XML檔案" Click="OnBuildXml"/>
+            <Button Content="讀取XML檔案" Click="OnReadXml" Margin="15,0,0,0"/>
+        </StackPanel>
+        <TextBlock Name="tbXml" FontSize="20" TextWrapping="Wrap" Grid.Row="1" Margin="5"/>
+    </Grid>
+</Page>

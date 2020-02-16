@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Button Content="開始說話" Click="OnClick"/>
+        <TextBlock TextWrapping="Wrap" FontSize="20">
+            <Run>
+                請說出：把彩色改為[紅色]
+            </Run>
+            <LineBreak/>
+            <Run>或是：把彩色設定為[紅色]</Run>
+            <LineBreak/>
+            <Run>
+                [紅色]必須是以下值中的一個：紅色、白色、藍色、綠色
+            </Run>
+        </TextBlock>
+        <TextBlock Name="tbRes" FontSize="24" TextWrapping="Wrap" Foreground="LightGreen"/>
+    </StackPanel>
+</Page>

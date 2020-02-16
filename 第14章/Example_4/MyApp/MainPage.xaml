@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="X="/>
+        <TextBlock Grid.Row="1" Text="Y="/>
+        <TextBlock Grid.Row="2" Text="Z="/>
+        <TextBlock Grid.Column="1" Name="tbX" Text="0.00"/>
+        <TextBlock Name="tbY" Grid.Column="1" Grid.Row="1" Text="0.00"/>
+        <TextBlock Name="tbZ" Grid.Column="1" Grid.Row="2" Text="0.00"/>
+    </Grid>
+</Page>

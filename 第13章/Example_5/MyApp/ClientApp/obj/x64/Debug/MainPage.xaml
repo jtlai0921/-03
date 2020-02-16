@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ClientApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClientApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="15">
+            <TextBox x:ConnectionId='1' Name="txtUploadUri" Header="請輸入上傳URI:" Text="http://192.168.1.100:98/upload"/>
+            <Button x:ConnectionId='2' Name="btnUpload" Content="選取檔案並開始上傳"                 Margin="0,15,0,0"/>
+            <ProgressBar x:ConnectionId='3' Name="pb" Maximum="100" Minimum="0" Foreground="Yellow" Height="15" Margin="3,13,0,6"/>
+            <TextBlock x:ConnectionId='4' Name="tbMsg" FontSize="20" TextWrapping="Wrap" Margin="15,5,15,0"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

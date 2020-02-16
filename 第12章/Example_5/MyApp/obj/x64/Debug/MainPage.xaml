@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="MyApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <ComboBox x:ConnectionId='1' Header="你希望多少天提示一次？" Name="cmb"                                         >
+            <ComboBoxItem>5天</ComboBoxItem>
+            <ComboBoxItem>8天</ComboBoxItem>
+            <ComboBoxItem>15天</ComboBoxItem>
+            <ComboBoxItem>1個月</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:ConnectionId='2' Name="txt1" Header="請設定一個別名："                             />
+        <TextBox x:ConnectionId='3' Name="txt2" Header="請指定一個關鍵詞："                             />
+        <ToggleSwitch x:ConnectionId='4' Name="tgswitch" Header="是否開啟自動取得？" OnContent="是" OffContent="否"                    />
+    </StackPanel>
+</Page>
+

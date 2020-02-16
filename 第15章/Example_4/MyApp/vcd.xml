@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="zh-cn">
+    <CommandPrefix>测试应用</CommandPrefix>
+    <Example>“打开 主页”或“打开 我的音乐”或“我的音乐”或“打开我的视频”或“我的视频”……</Example>
+    <Command Name="open">
+      <Example>“打开 我的音乐”或“我的音乐”</Example>
+      <ListenFor>[打开]{pages}</ListenFor>
+      <Feedback>好的，正在努力打开中……</Feedback>
+      <Navigate/>
+    </Command>
+    <PhraseList Label="pages">
+      <Item>主页</Item>
+      <Item>我的音乐</Item>
+      <Item>我的视频</Item>
+      <Item>我的照片</Item>
+    </PhraseList>
+  </CommandSet>
+</VoiceCommands>
+
